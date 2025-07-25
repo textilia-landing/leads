@@ -164,9 +164,63 @@
       margin-top: 0.5rem;
       font-weight: 600;
     }
+
+    .video-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.video-overlay {
+  z-index: 2;
+}
+
+.video-overlay h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.video-overlay h2 {
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  color: #fff;
+}
+
   </style>
 </head>
 <body>
+<section class="video-section">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="textilia.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+  </video>
+  <div class="video-overlay" data-aos="fade-down">
+    <h1>TEXTILIA</h1>
+    <h2>Especialistas en Textil para Empresas y Emprendedores</h2>
+  </div>
+</section>
 
   <section class="hero">
     <div class="text" data-aos="fade-right">
