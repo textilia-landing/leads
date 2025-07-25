@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing - Oltex</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #fff;
+  color: #222;
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
+}
+
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+}
+
+.hero .text {
+  max-width: 500px;
+  margin-right: 2rem;
+}
+
+.hero img {
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.hero button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.values .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 200px;
+  background: #efefef;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.collabs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.collabs .left, .collabs .right {
+  flex: 1;
+  position: relative;
+}
+
+.collabs img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.collabs button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.highlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.highlights li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.premium {
+  background: #222;
+  color: #fff;
+}
+
+.premium button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.blog .articles {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.blog img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.featured .items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.featured img {
+  width: 100px;
+  height: auto;
+}
+
+.featured p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="text">
+      <h1>Oltex, ropa para crear tu propia marca en España</h1>
+      <p>Empieza tu marca desde cero con productos de calidad, diseño personalizado y logística completa.</p>
+      <button>Empezar</button>
+    </div>
+    <img src="https://source.unsplash.com/featured/?fashion" alt="Moda">
+  </section>
+
+  <section class="values">
+    <h2>Valores que nos hacen únicos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Consultoría de Marca</h3>
+        <p>Te ayudamos a definir tu propuesta de marca desde el primer día.</p>
+      </div>
+      <div class="card">
+        <h3>Servicios de Logística</h3>
+        <p>Envíos nacionales e internacionales, con seguimiento y control de stock.</p>
+      </div>
+      <div class="card">
+        <h3>Diseño / Personalización</h3>
+        <p>Personaliza tus prendas con estampado, bordado o diseño exclusivo.</p>
+      </div>
+      <div class="card">
+        <h3>Calidad en stock 24/7</h3>
+        <p>Accede a nuestro catálogo de prendas listas para usar con envío inmediato.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="collabs">
+    <div class="left">
+      <img src="https://source.unsplash.com/featured/?urban" alt="Colaboraciones">
+      <button>Registrar</button>
+    </div>
+    <div class="right">
+      <img src="https://source.unsplash.com/featured/?streetwear" alt="Marca">
+      <button>Crear cuenta</button>
+    </div>
+  </section>
+
+  <section class="highlights">
+    <h2>TOP CHECKS</h2>
+    <ul>
+      <li>Contamos con <strong>4</strong> showrooms</li>
+      <li>Trabajamos con <strong>+1000</strong> marcas</li>
+      <li>Hemos fabricado <strong>+20M</strong> de prendas</li>
+      <li>Presencia en <strong>+10</strong> países</li>
+      <li>Etiqueta <strong>eco sostenible</strong></li>
+    </ul>
+  </section>
+
+  <section class="premium">
+    <h2>PREMIUM BLANKS</h2>
+    <button>Agendar una cita</button>
+  </section>
+
+  <section class="blog">
+    <h2>Nuestro Blog</h2>
+    <div class="articles">
+      <img src="https://source.unsplash.com/featured/?cap" alt="Gorra"/>
+      <img src="https://source.unsplash.com/featured/?tshirt" alt="Camiseta"/>
+      <img src="https://source.unsplash.com/featured/?fabric" alt="Tela"/>
+    </div>
+  </section>
+
+  <section class="featured">
+    <h2>Prendas Destacadas</h2>
+    <div class="items">
+      <div><img src="https://source.unsplash.com/featured/?purple-shirt" alt="Sarik"><p>Sarik</p></div>
+      <div><img src="https://source.unsplash.com/featured/?green-hoodie" alt="Hudson"><p>Hudson</p></div>
+      <div><img src="https://source.unsplash.com/featured/?blue-zip" alt="Zipp"><p>Zipp</p></div>
+      <div><img src="https://source.unsplash.com/featured/?gray-tshirt" alt="Veltex"><p>Veltex</p></div>
+    </div>
+  </section>
+
+</body>
+</html>
