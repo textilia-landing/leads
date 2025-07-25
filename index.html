@@ -3,179 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Landing - Oltex</title>
+  <title>Landing Oltex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background: #fff;
-  color: #222;
-}
+    :root {
+      --primary: #6e76b0;
+      --light: #f9f9f9;
+      --dark: #222;
+    }
 
-h1, h2, h3 {
-  margin-bottom: 0.5rem;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-section {
-  padding: 2rem;
-  text-align: center;
-}
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
 
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background: #f9f9f9;
-}
+    h1, h2, h3 {
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
 
-.hero .text {
-  max-width: 500px;
-  margin-right: 2rem;
-}
+    h1 {
+      font-size: 2.5rem;
+    }
 
-.hero img {
-  max-width: 400px;
-  border-radius: 10px;
-}
+    h2 {
+      font-size: 2rem;
+    }
 
-.hero button {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  cursor: pointer;
-  margin-top: 1rem;
-}
+    section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
 
-.values .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
+    button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
 
-.card {
-  flex: 1 1 200px;
-  background: #efefef;
-  padding: 1rem;
-  border-radius: 8px;
-}
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background: var(--light);
+      gap: 2rem;
+    }
 
-.collabs {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    .hero .text {
+      max-width: 500px;
+    }
 
-.collabs .left, .collabs .right {
-  flex: 1;
-  position: relative;
-}
+    .hero img {
+      max-width: 400px;
+      border-radius: 10px;
+    }
 
-.collabs img {
-  width: 100%;
-  border-radius: 10px;
-}
+    .values .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
 
-.collabs button {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-}
+    .card {
+      flex: 1 1 200px;
+      background: #eee;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
 
-.highlights ul {
-  list-style: none;
-  padding: 0;
-}
+    .collabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
 
-.highlights li {
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
-}
+    .collabs .left, .collabs .right {
+      flex: 1;
+      position: relative;
+    }
 
-.premium {
-  background: #222;
-  color: #fff;
-}
+    .collabs img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-.premium button {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: #fff;
-  color: #000;
-  border: none;
-  cursor: pointer;
-}
+    .collabs button {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: var(--primary);
+    }
 
-.blog .articles {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
+    .highlights ul {
+      list-style: none;
+      padding: 0;
+    }
 
-.blog img {
-  width: 100px;
-  height: auto;
-  border-radius: 8px;
-}
+    .highlights li {
+      margin: 0.75rem 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
 
-.featured .items {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
-}
+    .premium {
+      background: var(--primary);
+      color: #fff;
+    }
 
-.featured img {
-  width: 100px;
-  height: auto;
-}
+    .premium button {
+      background: #fff;
+      color: var(--primary);
+    }
 
-.featured p {
-  margin-top: 0.5rem;
-  font-weight: bold;
-}
+    .blog .articles {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
 
+    .blog img {
+      width: 150px;
+      border-radius: 10px;
+    }
 
-</style>
+    .featured .items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .featured img {
+      width: 120px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .featured p {
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
 
   <section class="hero">
-    <div class="text">
+    <div class="text" data-aos="fade-right">
       <h1>Oltex, ropa para crear tu propia marca en España</h1>
       <p>Empieza tu marca desde cero con productos de calidad, diseño personalizado y logística completa.</p>
       <button>Empezar</button>
     </div>
-    <img src="https://source.unsplash.com/featured/?fashion" alt="Moda">
+    <img src="https://source.unsplash.com/featured/?fashion" alt="Moda" data-aos="fade-left">
   </section>
 
-  <section class="values">
+  <section class="values" data-aos="fade-down">
     <h2>Valores que nos hacen únicos</h2>
     <div class="cards">
-      <div class="card">
+      <div class="card" data-aos="fade-up">
         <h3>Consultoría de Marca</h3>
         <p>Te ayudamos a definir tu propuesta de marca desde el primer día.</p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up">
         <h3>Servicios de Logística</h3>
         <p>Envíos nacionales e internacionales, con seguimiento y control de stock.</p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up">
         <h3>Diseño / Personalización</h3>
         <p>Personaliza tus prendas con estampado, bordado o diseño exclusivo.</p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up">
         <h3>Calidad en stock 24/7</h3>
         <p>Accede a nuestro catálogo de prendas listas para usar con envío inmediato.</p>
       </div>
@@ -183,17 +200,17 @@ section {
   </section>
 
   <section class="collabs">
-    <div class="left">
+    <div class="left" data-aos="fade-right">
       <img src="https://source.unsplash.com/featured/?urban" alt="Colaboraciones">
       <button>Registrar</button>
     </div>
-    <div class="right">
+    <div class="right" data-aos="fade-left">
       <img src="https://source.unsplash.com/featured/?streetwear" alt="Marca">
       <button>Crear cuenta</button>
     </div>
   </section>
 
-  <section class="highlights">
+  <section class="highlights" data-aos="fade-up">
     <h2>TOP CHECKS</h2>
     <ul>
       <li>Contamos con <strong>4</strong> showrooms</li>
@@ -204,12 +221,12 @@ section {
     </ul>
   </section>
 
-  <section class="premium">
+  <section class="premium" data-aos="fade-down">
     <h2>PREMIUM BLANKS</h2>
     <button>Agendar una cita</button>
   </section>
 
-  <section class="blog">
+  <section class="blog" data-aos="fade-up">
     <h2>Nuestro Blog</h2>
     <div class="articles">
       <img src="https://source.unsplash.com/featured/?cap" alt="Gorra"/>
@@ -218,7 +235,7 @@ section {
     </div>
   </section>
 
-  <section class="featured">
+  <section class="featured" data-aos="fade-up">
     <h2>Prendas Destacadas</h2>
     <div class="items">
       <div><img src="https://source.unsplash.com/featured/?purple-shirt" alt="Sarik"><p>Sarik</p></div>
@@ -228,5 +245,12 @@ section {
     </div>
   </section>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
