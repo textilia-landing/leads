@@ -208,6 +208,54 @@
   color: #fff;
 }
 
+
+    .slidermotion {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #4b0082, #b36fe0);
+  color: #fff;
+  text-align: center;
+}
+
+.slidermotion h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.slider-track {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+.slider-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  min-width: 280px;
+  max-width: 320px;
+}
+
+.slider-item img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slider-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+    
+
   </style>
 </head>
 <body>
@@ -221,6 +269,23 @@
     <h2>Especialistas en Textil para Empresas y Emprendedores</h2>
   </div>
 </section>
+
+  <section class="slidermotion" data-aos="fade-up">
+  <h2>Explora Nuestro Estilo</h2>
+  <div class="slider-track">
+    <div class="slider-item">
+      <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="Prenda 1" />
+    </div>
+    <div class="slider-item">
+      <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="Prenda 2" />
+    </div>
+    <div class="slider-item">
+      <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="Prenda 3" />
+    </div>
+  </div>
+</section>
+
+  
 
   <section class="hero">
     <div class="text" data-aos="fade-right">
