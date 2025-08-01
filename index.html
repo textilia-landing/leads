@@ -1,375 +1,552 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Landing Oltex</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts: Raleway -->
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a2e0ef8f3c.js" crossorigin="anonymous"></script>
+
+<!-- Estilos -->
+<style>
     :root {
-      --primary: #6e76b0;
-      --light: #f9f9f9;
-      --dark: #222;
+        --color-primary: #6a11cb;
+        --color-secondary: #2575fc;
+        --gradient: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+        --text-light: #ffffff;
+        --text-dark: #1c1c1c;
     }
 
     * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     body {
-      font-family: 'Raleway', sans-serif;
-      background: #fff;
-      color: var(--dark);
-      line-height: 1.6;
+        font-family: 'Raleway', sans-serif;
+        background: #0f0f1a;
+        color: var(--text-light);
+        line-height: 1.6;
     }
 
-    h1, h2, h3 {
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 1rem;
+    h1, h2, h3, h4 {
+        font-weight: 700;
     }
 
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-
+    .boton-formulario {
+    margin-top: 2rem;
+    display: inline-block;
+    background: var(--gradient);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
     section {
-      padding: 3rem 2rem;
-      text-align: center;
+        padding: 4rem 2rem;
     }
 
-    button {
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-weight: 600;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 1rem;
+    .gancho {
+        background: var(--gradient);
+        text-align: center;
+        padding: 6rem 2rem;
     }
 
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      background: var(--light);
-      gap: 2rem;
+    .gancho h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
     }
 
-    .hero .text {
-      max-width: 500px;
+    .gancho h2 {
+        font-size: 2rem;
     }
 
-    .hero img {
-      max-width: 400px;
-      border-radius: 10px;
+    .pasos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        background-color: #1e1e2f;
     }
 
-    .values .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
+    .pasos img{
+        width: 50px;
     }
 
-    .card {
-      flex: 1 1 200px;
-      background: #eee;
-      padding: 1.5rem;
-      border-radius: 10px;
+    .pasos div {
+        flex: 1 1 300px;
+        padding: 2rem;
+        margin: 1rem;
+        background: #292949;
+        border-radius: 15px;
+        transition: transform 0.3s ease;
     }
 
-    .collabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
+    .pasos div:hover {
+        transform: translateY(-5px);
     }
 
-    .collabs .left, .collabs .right {
-      flex: 1;
-      position: relative;
+
+
+    .instalaciones {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        background-color: #121224;
     }
 
-    .collabs img {
-      width: 100%;
-      border-radius: 10px;
+    .imagen-instalaciones img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 20px;
     }
 
-    .collabs button {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      background: var(--primary);
+    .texto-instalaciones {
+        flex: 1;
+        font-size: 1.2rem;
     }
 
-    .highlights ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .highlights li {
-      margin: 0.75rem 0;
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-
-    .premium {
-      background: var(--primary);
-      color: #fff;
-    }
-
-    .premium button {
-      background: #fff;
-      color: var(--primary);
-    }
-
-    .blog .articles {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-    }
-
-    .blog img {
-      width: 150px;
-      border-radius: 10px;
-    }
-
-    .featured .items {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .featured img {
-      width: 120px;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .featured p {
-      margin-top: 0.5rem;
-      font-weight: 600;
-    }
-
-    .video-section {
-  position: relative;
-  height: 100vh;
+ .sliderprendas {
+  background-color: #1c1c2e;
+  padding: 4rem 0;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
+  position: relative;
 }
 
-.background-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  filter: brightness(0.4);
-}
-
-.video-overlay {
-  z-index: 2;
-}
-
-.video-overlay h1 {
-  font-size: 4rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: #fff;
-}
-
-.video-overlay h2 {
-  font-size: 1.75rem;
-  font-weight: 300;
-  margin-top: 1rem;
-  color: #fff;
-}
-
-
-    .slidermotion {
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, #4b0082, #b36fe0);
-  color: #fff;
-  text-align: center;
-}
-
-.slidermotion h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.slider-track {
-  display: flex;
-  overflow-x: auto;
-  gap: 2rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 1rem;
-}
-
-.slider-item {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 1rem;
-  transition: transform 0.3s ease;
-  min-width: 280px;
-  max-width: 320px;
-}
-
-.slider-item img {
+.marquee {
   width: 100%;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
 }
 
-.slider-item:hover img {
+.marquee-content {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.prenda {
+  min-width: 180px;
+  flex-shrink: 0;
+  background: #292949;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.prenda img {
+  width: 100%;
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.prenda h3 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.prenda:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-    
 
-  </style>
+    .maquinas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        background: #121224;
+    }
+
+    .maquina {
+        background: #292949;
+        border-radius: 15px;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .maquina-img img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .formulariocompleto {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-step {
+  display: none;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.step-active {
+  display: block;
+}
+
+.form-step h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.opciones-productos {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.opcion-img {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.opcion-img input {
+  display: none;
+}
+
+.opcion-img img {
+  width: 150px;
+  height: auto;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.opcion-img span {
+  display: block;
+  margin-top: 0.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.opcion-img input:checked + img {
+  border: 3px solid var(--color-secondary);
+  transform: scale(1.05);
+}
+
+
+.pregunta2-options, .cantidad-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pregunta2-options button,
+.cantidad-btn {
+  background: #fff1;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pregunta2-options button:hover,
+.cantidad-btn:hover {
+  background: #fff3;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+    .calendly, .reviews {
+        background-color: #1e1e2f;
+        padding: 4rem 2rem;
+        min-height: 200px;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .instalaciones {
+            flex-direction: column;
+        }
+    }
+
+    .calendly {
+    background: var(--gradient);
+    color: white;
+    padding: 4rem 1rem;
+}
+
+.calendly h2,
+.calendly p {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.calendly-inline-widget {
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive height for Calendly */
+@media (max-width: 768px) {
+    .calendly-inline-widget {
+        height: 900px !important;
+    }
+}
+
+
+</style>
+
 </head>
 <body>
-<section class="video-section">
-  <video autoplay muted loop playsinline class="background-video">
-    <source src="textilia.mp4" type="video/mp4">
-    Tu navegador no soporta videos HTML5.
-  </video>
-  <div class="video-overlay" data-aos="fade-down">
-    <h1>TEXTILIA</h1>
-    <h2>Especialistas en Textil para Empresas y Emprendedores</h2>
+    <!-- GANCHO -->
+    <section class="gancho">
+        <h1>Textilia</h1>
+        <h2>Producción textil para PYMES</h2>
+        <a href="#formulario" class="boton-formulario">
+            <i class="fa-solid fa-pencil"></i>Empieza tu proyecto
+        </a>
+    </section>
+
+    <!-- PASOS -->
+    <section class="pasos">
+        <div class="paso1">
+            <h3>Rellenas el formulario</h3>
+            <img src="https://i.postimg.cc/XN26b86N/rellenar.png" alt="">
+        </div>
+        <div class="paso2">
+            <h3>Nos ponemos en contacto contigo y aterrizamos tu proyecto</h3>
+            <img src="https://i.postimg.cc/mrTmkv7v/dialogamos.png" alt="">
+        </div>
+        <div class="paso3">
+            <h3>Ponemos tu producción en marcha y te damos una fecha de entrega</h3>
+            <img src="https://i.postimg.cc/Sxfwg7dp/produccion.png" alt="">
+        </div>
+    </section>
+
+    <!-- INSTALACIONES -->
+    <section class="instalaciones">
+        <div class="imagen-instalaciones">
+            <img src="https://i.postimg.cc/T3ttykQh/Whats-App-Image-2025-07-29-at-11-06-44-1.jpg" alt="Instalaciones Textilia">
+        </div>
+        <div class="texto-instalaciones">
+            <h2><i class="fas fa-industry"></i> Textilia desde 2005 en Alpedrete, Madrid</h2>
+            <p>Fundada por Alejandro, comenzó como un negocio familiar. Inicialmente trabajaban con entidades del gobierno, grandes empresas públicas y privadas. Hoy, ofrecen un servicio premium a PYMES y emprendedores.</p>
+            <a href="#formulario" class="boton-formulario"><i class="fas fa-handshake"></i> Quiero trabajar con Textilia</a>
+        </div>
+    </section>
+
+    <!-- PRENDAS -->
+ <section class="sliderprendas">
+  <h2 style="text-align:center; margin-bottom: 2rem;"><i class="fas fa-tshirt"></i> Algunas de nuestras prendas</h2>
+  <div class="marquee">
+    <div class="marquee-content">
+      <!-- Repite las prendas -->
+      <div class="prenda">
+        <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="">
+        <h3>Camiseta Oversider</h3>
+      </div>
+      <div class="prenda">
+        <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="">
+        <h3>Camiseta Oversider</h3>
+      </div>
+      <div class="prenda">
+        <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="">
+        <h3>Camiseta Oversider</h3>
+      </div>
+      <div class="prenda">
+        <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="">
+        <h3>Camiseta Oversider</h3>
+      </div>
+      <!-- Duplicación para bucle infinito -->
+      <div class="prenda">
+        <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="">
+        <h3>Camiseta Oversider</h3>
+      </div>
+      <div class="prenda">
+        <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="">
+        <h3>Camiseta Oversider</h3>
+      </div>
+    </div>
   </div>
 </section>
 
-  <section class="slidermotion" data-aos="fade-up">
-  <h2>Explora Nuestro Estilo</h2>
-  <div class="slider-track">
-    <div class="slider-item">
-      <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="Prenda 1" />
+    <!-- MAQUINARIA -->
+    <section class="maquinas">
+        <div class="maquina">
+            <div class="maquina-img">
+                <img src="https://i.postimg.cc/QCrYJ2cJ/Whats-App-Image-2025-08-01-at-11-18-43.jpg" alt="Máquina 1">
+            </div>
+            <div class="maquina-description">
+                <h2><i class="fas fa-tools"></i> Máquina Bordadora</h2>
+                <p>Alta precisión para bordados de calidad profesional.</p>
+            </div>
+        </div>
+
+        <div class="maquina">
+            <div class="maquina-img">
+                <img src="https://i.postimg.cc/W4wd4rXp/Whats-App-Image-2025-08-01-at-11-18-44.jpg" alt="Máquina 2">
+            </div>
+            <div class="maquina-description">
+                <h2><i class="fas fa-print"></i> Impresora Textil</h2>
+                <p>Ideal para impresiones directas sobre prendas.</p>
+            </div>
+        </div>
+
+        <div class="maquina">
+            <div class="maquina-img">
+                <img src="https://i.postimg.cc/3rmxr2Rs/Whats-App-Image-2025-08-01-at-11-18-52.jpg" alt="Máquina 3">
+            </div>
+            <div class="maquina-description">
+                <h2><i class="fas fa-cogs"></i> Máquina de Corte</h2>
+                <p>Automatiza el corte de patrones con exactitud.</p>
+            </div>
+        </div>
+
+        <div class="maquina">
+            <div class="maquina-img">
+                <img src="https://i.postimg.cc/qv5Tx7qc/Whats-App-Image-2025-08-01-at-11-18-53.jpg" alt="Máquina 4">
+            </div>
+            <div class="maquina-description">
+                <h2><i class="fas fa-ruler-combined"></i> Prensa Sublimadora</h2>
+                <p>Para aplicar gráficos térmicos a tejidos especiales.</p>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <!-- FORMULARIO -->
+    <section class="formulario-dinamico" id="formulario">
+  <div class="formulariocompleto">
+    
+    <!-- Paso 1 -->
+    <div class="form-step step-active" id="step-1">
+      <h4><i class="fas fa-tags"></i> ¿Qué tipo de producto estás buscando?</h4>
+      <div class="opciones-productos">
+        <label class="opcion-img">
+            <input type="checkbox" name="producto" value="Camisetas">
+            <img src="https://i.postimg.cc/yNpDMRjD/camisetas.png" alt="Camisetas">
+            <span>Camisetas</span>
+        </label>
+
+        <label class="opcion-img">
+            <input type="checkbox" name="producto" value="Sudaderas">
+            <img src="https://i.postimg.cc/NGp6gy0k/camisetas-1.png" alt="Sudaderas">
+            <span>Sudaderas</span>
+        </label>
+        </div>
     </div>
-    <div class="slider-item">
-      <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="Prenda 2" />
+
+    <!-- Paso 2 -->
+    <div class="form-step" id="step-2">
+      <h4><i class="fas fa-question-circle"></i> ¿Deseas recibir muestras o hablar con un especialista?</h4>
+      <div class="pregunta2-options">
+        <button class="respuesta" data-next="step-3"><i class="fas fa-box-open"></i> Recibir muestras</button>
+        <button class="respuesta" data-next="step-3"><i class="fas fa-user-headset"></i> Hablar con un especialista</button>
+      </div>
     </div>
-    <div class="slider-item">
-      <img src="https://i.postimg.cc/dtNfCyk6/clothes.png" alt="Prenda 3" />
+
+    <!-- Paso 3 -->
+    <div class="form-step" id="step-3">
+      <h4><i class="fas fa-layer-group"></i> ¿Cantidad que buscas de producción?</h4>
+      <div class="cantidad-options">
+        <button class="cantidad-btn">+10</button>
+        <button class="cantidad-btn">+25</button>
+        <button class="cantidad-btn">+50</button>
+        <button class="cantidad-btn">+100</button>
+        <button class="cantidad-btn">+200</button>
+        <button class="cantidad-btn">+500</button>
+        <button class="cantidad-btn">+1000</button>
+        <button class="cantidad-btn">+2500</button>
+      </div>
     </div>
+
   </div>
 </section>
 
-  
 
-  <section class="hero">
-    <div class="text" data-aos="fade-right">
-      <h1>Oltex, ropa para crear tu propia marca en España</h1>
-      <p>Empieza tu marca desde cero con productos de calidad, diseño personalizado y logística completa.</p>
-      <button>Empezar</button>
-    </div>
-    <img src="https://i.postimg.cc/ncksSxwN/4cde7df8-ef90-423b-bc69-fc3ae7cbf148.png" alt="Moda" data-aos="fade-left">
-  </section>
+    <!-- CALENDLY -->
+    <section class="calendly">
+        <h2><i class="fas fa-calendar-alt"></i> Reserva una reunión</h2>
+        <p>Agenda una llamada con nuestro equipo para empezar a producir.</p>
+        <!-- Principio del widget integrado de Calendly -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/wonder-technology/wonder" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Final del widget integrado de Calendly -->
+    </section>
 
-  <section class="values" data-aos="fade-down">
-    <h2>Valores que nos hacen únicos</h2>
-    <div class="cards">
-      <div class="card" data-aos="fade-up">
-        <h3>Consultoría de Marca</h3>
-        <p>Te ayudamos a definir tu propuesta de marca desde el primer día.</p>
-      </div>
-      <div class="card" data-aos="fade-up">
-        <h3>Servicios de Logística</h3>
-        <p>Envíos nacionales e internacionales, con seguimiento y control de stock.</p>
-      </div>
-      <div class="card" data-aos="fade-up">
-        <h3>Diseño / Personalización</h3>
-        <p>Personaliza tus prendas con estampado, bordado o diseño exclusivo.</p>
-      </div>
-      <div class="card" data-aos="fade-up">
-        <h3>Calidad en stock 24/7</h3>
-        <p>Accede a nuestro catálogo de prendas listas para usar con envío inmediato.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="collabs">
-    <div class="left" data-aos="fade-right">
-      <img src="https://source.unsplash.com/featured/?urban" alt="Colaboraciones">
-      <button>Registrar</button>
-    </div>
-    <div class="right" data-aos="fade-left">
-      <img src="https://source.unsplash.com/featured/?streetwear" alt="Marca">
-      <button>Crear cuenta</button>
-    </div>
-  </section>
-
-  <section class="highlights" data-aos="fade-up">
-    <h2>TOP CHECKS</h2>
-    <ul>
-      <li>Contamos con <strong>4</strong> showrooms</li>
-      <li>Trabajamos con <strong>+1000</strong> marcas</li>
-      <li>Hemos fabricado <strong>+20M</strong> de prendas</li>
-      <li>Presencia en <strong>+10</strong> países</li>
-      <li>Etiqueta <strong>eco sostenible</strong></li>
-    </ul>
-  </section>
-
-  <section class="premium" data-aos="fade-down">
-    <h2>PREMIUM BLANKS</h2>
-    <button>Agendar una cita</button>
-  </section>
-
-  <section class="blog" data-aos="fade-up">
-    <h2>Nuestro Blog</h2>
-    <div class="articles">
-      <img src="https://source.unsplash.com/featured/?cap" alt="Gorra"/>
-      <img src="https://source.unsplash.com/featured/?tshirt" alt="Camiseta"/>
-      <img src="https://source.unsplash.com/featured/?fabric" alt="Tela"/>
-    </div>
-  </section>
-
-  <section class="featured" data-aos="fade-up">
-    <h2>Prendas Destacadas</h2>
-    <div class="items">
-      <div><img src="https://source.unsplash.com/featured/?purple-shirt" alt="Sarik"><p>Sarik</p></div>
-      <div><img src="https://source.unsplash.com/featured/?green-hoodie" alt="Hudson"><p>Hudson</p></div>
-      <div><img src="https://source.unsplash.com/featured/?blue-zip" alt="Zipp"><p>Zipp</p></div>
-      <div><img src="https://source.unsplash.com/featured/?gray-tshirt" alt="Veltex"><p>Veltex</p></div>
-    </div>
-  </section>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- REVIEWS -->
+    <section class="reviews">
+        <h2><i class="fas fa-star"></i> Lo que dicen nuestros clientes</h2>
+        <p>Testimonios próximamente...</p>
+    </section>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
+  document.addEventListener("DOMContentLoaded", () => {
+    const steps = document.querySelectorAll(".form-step");
+
+    function showStep(stepId) {
+      steps.forEach(step => step.classList.remove("step-active"));
+      document.getElementById(stepId).classList.add("step-active");
+    }
+
+    // Paso 1: cuando se marca al menos una opción, ir al paso 2
+    const productoInputs = document.querySelectorAll('input[name="producto"]');
+    productoInputs.forEach(input => {
+      input.addEventListener("change", () => {
+        showStep("step-2");
+      });
     });
-  </script>
+
+    // Paso 2: elegir muestra o especialista
+    const respuestas = document.querySelectorAll(".respuesta");
+    respuestas.forEach(btn => {
+      btn.addEventListener("click", () => {
+        showStep("step-3");
+      });
+    });
+
+    // (Opcional) podrías también manejar lo que ocurre al elegir cantidad
+    const cantidadBtns = document.querySelectorAll(".cantidad-btn");
+    cantidadBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        alert("Gracias, recibimos tu solicitud. Pronto nos pondremos en contacto.");
+        // Aquí podrías mostrar Calendly, enviar datos o redirigir
+      });
+    });
+
+    // Inicia en el paso 1
+    showStep("step-1");
+  });
+</script>
+
+
 </body>
+
 </html>
